@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Reveal</title>
+    <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css">
+    
+</head>
+
+<body>
+    
+    <div class="reveal">
+        
+        <div class="slides">
+            <section>
+                <h2>Je suis le premier slide</h2>
+            </section>
+            <section data-transition="zoom">
+                <h2>Je suis le deuxième slide</h2>
+            </section>
+            <section data-transition="fade">
+                <h2>Je suis le dernier slide</h2>
+            </section>
+            <section data-auto-animate>
+                <h2 style="color:red">:p</h2>
+                <p>Je suis finalement </p>
+            </section>
+            <section data-auto-animate>
+                <h2 style="color:orange">:p</h2>
+                <p>le vrai slide !</p>
+            </section>
+            <section>
+                <ul>
+                    <!-- class=fragment pour afficher un après l'autre -->
+                    <li class="fragment">Je suis</li>
+                    <li class="fragment">Une </li>
+                    <li class="fragment">Liste</li>
+                </ul>
+            </section>
+            <section>
+                <!-- data-background-color change la couleur a chaque slide -->
+                <section data-background-color="#3c3c3c">
+                    <h2>Je suis gris très foncé</h2>
+                </section>
+                <section data-background-color="#616161">
+                    <h2>Je suis gris un peu foncé</h2>
+                </section>
+                <section data-background-color="#787878">
+                    <h2>Je suis juste gris</h2>
+                </section>
+                <section data-background-color="#b4b4b4">
+                    <h2>Je suis pas très gris</h2>
+                </section>
+                <section data-background-color="#f0f0f0">
+                    <h2>Je suis blanc non ?</h2>
+                </section>
+            </section>
+            
+        </div>
+        
+    </div>
+    
+    <script type="module">
+        import Reveal from '/reveal.js/dist/reveal.esm.js'
+        Reveal.initialize({
+            //Pour faire défiler automatiquement les slides a 2sec
+            // autoSlide: 1000,
+            // loop: true
+        });
+    </script>
+</body>
+
+</html>
