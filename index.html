@@ -8,46 +8,22 @@
     <title>Reveal</title>
     <link rel="stylesheet" href="reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css">
+    <link rel="stylesheet" href="reveal.js/plugin/highlight/zenburn.css">
     
 </head>
 
 <body>
-
-        {# Introduction (1 slide) :
-        Présentation rapide de moi et du sujet de la présentation.
-
-    Contexte (1-2 slides) :
-        Brève description du problème que mon application résout.
-
-    Présentation du Projet (1-2 slides) :
-        Nom et objectif principal de mon projet.
-
-    Technologies Utilisées (1 slide) :
-        Liste des technologies principales utilisées.
-
-    Architecture de l'Application (2-3 slides) :
-        Brève description de l'architecture de l'application (contrôleurs, templates, etc.).
-
-    Fonctionnalités Clés (3-4 slides) :
-        Présentation des fonctionnalités clés avec des captures d'écran.
-
-    Démo (2-3 slides) :
-        Quelques captures d'écran clés de l'application en action.
-
-    Challenges et Solutions (1-2 slides) :
-        Un ou deux défis majeurs rencontrés et comment ils ont été résolus.
-
-    Améliorations Futures (1 slide) :
-        Liste des améliorations ou fonctionnalités prévues.
-
-    Conclusion (1 slide) :
-        Résumé rapide et remerciements. #}
     
     <div class="reveal">
         
         <div class="slides">
             <section>
                 <h2>Je suis le premier slide</h2>
+                <aside class="notes">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti debitis amet voluptatibus. 
+                    Adipisci soluta voluptatum ut fugiat nihil maiores rerum alias veritatis, enim earum atque in cupiditate 
+                    nostrum aperiam facere.
+                </aside>
             </section>
             <section data-transition="zoom">
                 <h2>Je suis le deuxième slide</h2>
@@ -88,15 +64,83 @@
                 <section data-background-color="#f0f0f0">
                     <h2>Je suis blanc non ?</h2>
                 </section>
+                <section data-markdown>
+                    
+                    <textarea data-template>
+                            ## Slide 1
+
+                            Exemple de code js :
+
+                            ```js [1-2|3-4|5-6|7|8|10-11|13-14|17|]
+                            var actualDate = new Date(); 
+                            var numWeeks = 6; 
+                            const splitURL = window.location.href.split("/");
+                            const courseName = splitURL[splitURL.length-1];
+                            var startTime = new Date(); 
+                            startTime.setHours(8, 0, 0);
+                            var timeSlots = []; 
+                            while(startTime.getHours()<18 || startTime.getMinutes()<30){
+                            
+                            var startTime_hours = startTime.getHours() > 9 ? startTime.getHours() : "0"+startTime.getHours();
+                            var startTime_minutes = startTime.getMinutes() > 9 ? startTime.getMinutes() : "0"+startTime.getMinutes();
+
+                            timeSlots.push(startTime_hours+":"+startTime_minutes);
+                            startTime.setMinutes(startTime.getMinutes() + 30);
+                            }
+
+                            generateCalendar();
+                            ```
+
+                    </textarea>
+                </section>
             </section>
             
         </div>
         
     </div>
+
+    {# S pour activer le Speaker Review #}
+    {# https://revealjs.com/transitions/   pour les transitions ou la doc#}
+    
+        {# Introduction (1 slide) :
+        Présentation rapide de moi et du sujet de la présentation.
+
+    Contexte (1-2 slides) :
+        Brève description du problème que mon application résout.
+
+    Présentation du Projet (1-2 slides) :
+        Nom et objectif principal de mon projet.
+
+    Technologies Utilisées (1 slide) :
+        Liste des technologies principales utilisées.
+
+    Architecture de l'Application (2-3 slides) :
+        Brève description de l'architecture de l'application (contrôleurs, templates, etc.).
+
+    Fonctionnalités Clés (3-4 slides) :
+        Présentation des fonctionnalités clés avec des captures d'écran.
+
+    Démo (2-3 slides) :
+        Quelques captures d'écran clés de l'application en action.
+
+    Challenges et Solutions (1-2 slides) :
+        Un ou deux défis majeurs rencontrés et comment ils ont été résolus.
+
+    Améliorations Futures (1 slide) :
+        Liste des améliorations ou fonctionnalités prévues.
+
+    Conclusion (1 slide) :
+        Résumé rapide et remerciements. #}
     
     <script type="module">
         import Reveal from '/reveal.js/dist/reveal.esm.js'
+        import RevealNotes from '/reveal.js/plugin/notes/notes.esm.js'
+        import RevealMarkdown from '/reveal.js/plugin/markdown/markdown.esm.js'
+        import RevealHighlight from '/reveal.js/plugin/Highlight/Highlight.esm.js'
         Reveal.initialize({
+            /* Pour avoir l'hash en url */
+            hash: true,
+            plugins: [RevealNotes, RevealMarkdown, RevealHighlight]
             //Pour faire défiler automatiquement les slides a 2sec
             // autoSlide: 1000,
             // loop: true
