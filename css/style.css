@@ -1,0 +1,25 @@
+img {
+    width: 235px;
+    height: 135px;
+}
+
+.img-presentation{
+    width:  50%;
+    height: auto;
+}
+
+.fragment {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.minus-margin{
+    margin-left: -74px;
+}
+
+.minus-margin2 {
+    margin-left: -12px;
+}

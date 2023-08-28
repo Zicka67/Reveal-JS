@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Reveal</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css">
     <link rel="stylesheet" href="reveal.js/plugin/highlight/zenburn.css">
@@ -17,53 +18,99 @@
     <div class="reveal">
         
         <div class="slides">
+
+            <!-- INTRODUCTION -->
             <section>
-                <h2>Je suis le premier slide</h2>
+                <h1>Présentation du Projet</h1>
+                <img class="img-presentation" src="img\Sans titre.png" alt="">
                 <aside class="notes">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti debitis amet voluptatibus. 
                     Adipisci soluta voluptatum ut fugiat nihil maiores rerum alias veritatis, enim earum atque in cupiditate 
                     nostrum aperiam facere.
                 </aside>
             </section>
-            <section data-transition="zoom">
-                <h2>Je suis le deuxième slide</h2>
-            </section>
-            <section data-transition="fade">
-                <h2>Je suis le dernier slide</h2>
-            </section>
-            <section data-auto-animate>
-                <h2 style="color:red">:p</h2>
-                <p>Je suis finalement </p>
-            </section>
-            <section data-auto-animate>
-                <h2 style="color:orange">:p</h2>
-                <p>le vrai slide !</p>
-            </section>
+
+            <!-- CONTEXTE -->
             <section>
+                <h2>Contexte</h2>
+                <p>Le projet que j'ai développé est une application web qui vise à (expliquer le problème que l'application résout).</p>
+                <aside class="notes">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti debitis amet voluptatibus. 
+                    Adipisci soluta voluptatum ut fugiat nihil maiores rerum alias veritatis, enim earum atque in cupiditate 
+                    nostrum aperiam facere.
+                </aside>
+            </section>
+
+            <!-- PRESENTATION -->
+            <section>
+                <h2>Présentation du Projet</h2>
+                <p>Le projet s'appelle 'Douceur de Lune'. Il s'agit d'une plateforme qui (expliquer ce que fait l'application).</p>
+            </section>
+
+            <!-- TECHNO + LANGAGE -->
+            <section>
+                <h2 class="test">Technologies Utilisées</h2>
+                <p>Pour développer ce projet, j'ai utilisé plusieurs technologies :</p>
                 <ul>
-                    <!-- class=fragment pour afficher un après l'autre -->
-                    <li class="fragment">Je suis</li>
-                    <li class="fragment">Une </li>
-                    <li class="fragment">Liste</li>
+                    <li class="fragment img"><img src="img\Framework-Symfony-removebg-preview.png" alt="">SYMFONY comme framework de développement</li>
+                    <li class="fragment img"><img src="img\npm-composer-cover-removebg-preview.png" alt="">COMPOSER et NPM comme gestionnaire de dépendance</li>
+                    <li class="fragment img minus-margin"><img src="img\1_MGcLJS1ZvMFcBA94PXn16Q.png" alt="">VSCODE comme éditeur de code</li>
                 </ul>
             </section>
+
+            <section class="langage">
+                <h2>Ainsi que plusieurs langages utilisés</h2>
+                <ul>
+                    <li class="fragment img"><img src="img\php_mysql-removebg-preview.png" alt="">PHP - SQL pour la programmation côté serveur et intéragir avec la base de donnée</li>
+                    <li class="fragment img minus-margin2"><img src="img\css3-html5-removebg-preview.png" alt="">HTML - CSS pour gérer la mise en page</li>
+                    <li class="fragment img"><img src="img\JavaScript-Logo-removebg-preview.png" alt="">JavaScript pour la gestion de mon calendrier et rendre certaines pages plus dynamiques</li>
+                </ul>
+            </section>
+
+            <!-- ARCHITECTURE -->
             <section>
-                <!-- data-background-color change la couleur a chaque slide -->
-                <section data-background-color="#3c3c3c">
-                    <h2>Je suis gris très foncé</h2>
-                </section>
-                <section data-background-color="#616161">
-                    <h2>Je suis gris un peu foncé</h2>
-                </section>
-                <section data-background-color="#787878">
-                    <h2>Je suis juste gris</h2>
-                </section>
-                <section data-background-color="#b4b4b4">
-                    <h2>Je suis pas très gris</h2>
-                </section>
-                <section data-background-color="#f0f0f0">
-                    <h2>Je suis blanc non ?</h2>
-                </section>
+                <h2>Architecture de l'Application</h2>
+                <p>L'architecture de l'application est basée sur le modèle MVC (Modèle-Vue-Contrôleur). Les contrôleurs gèrent la logique de l'application, les modèles gèrent les données, et les vues gèrent l'affichage.</p>
+            </section>
+
+            <!-- FONCTIONNALTES -->
+            <section>
+                <h2>Fonctionnalités Clés</h2>
+                <p>Présenter les fonctionnalités clés de l'application. Use des captures d'écran ou des extraits de code pour illustrer certains points.</p>
+                <ul>
+                    <!-- class=fragment pour afficher un après l'autre -->
+                    <li class="fragment">Calendrier de réservation en JS</li>
+                    <li class="fragment">Méthode de payment Stripe</li>
+                </ul>
+            </section>
+
+            <!-- DEMO -->
+            <section>
+                <h2>Démo</h2>
+                <p>Montrer une démo rapide de l'application. Parler des différentes parties de l'application pendant que je montre les slides (prévoir 6-7 slides rapides).</p>
+            </section>
+
+            <!-- DEFIS ET SOLUTIONS -->
+            <section>
+                <h2>Challenges et Solutions</h2>
+                <p>Parler des défis que j'ai rencontré pendant le développement de l'application et comment j'ai surmonté ca</p>
+            </section>
+
+            <!-- AMELIORATIONS -->
+            <section>
+                <h2>Améliorations Futures</h2>
+                <p>Parler des améliorations ou des fonctionnalités que je prévoie d'ajouter à l'avenir.</p>
+            </section>
+
+            <!-- CONCLUSION -->
+            <section>
+                <h2>Conclusion</h2>
+                <p>Résumer les points clés de la présentation et remercier le jury.</p>
+            </section>
+
+            <!-- Exemple pour le code-->
+            <section>
+
                 <section data-markdown>
                     
                     <textarea data-template>
@@ -92,13 +139,19 @@
                             ```
 
                     </textarea>
+
                 </section>
+
             </section>
             
         </div>
         
     </div>
 
+    <!-- data-background-color="#3c3c3c" -->
+    <!-- data-transition="fade" -->
+    <!-- data-transition="zoom" -->
+    <!-- data-auto-animate -->
     {# S pour activer le Speaker Review #}
     {# https://revealjs.com/transitions/   pour les transitions ou la doc#}
     
