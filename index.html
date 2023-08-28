@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Reveal</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css">
     <link rel="stylesheet" href="reveal.js/plugin/highlight/zenburn.css">
@@ -24,9 +24,12 @@
                 <h1>Présentation du Projet</h1>
                 <img class="img-presentation" src="img\Sans titre.png" alt="">
                 <aside class="notes">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti debitis amet voluptatibus. 
-                    Adipisci soluta voluptatum ut fugiat nihil maiores rerum alias veritatis, enim earum atque in cupiditate 
-                    nostrum aperiam facere.
+                    Devenir mère, ou être une mère récente, représente un changement majeur dans la vie d'une femme. En plus d'être une femme, on devient également une mère. Ce rôle s'accompagne de transformations physiques et mentales, de doutes et de peurs, mais aussi d'un sentiment de bonheur, de satisfaction et d'amour. Ces changements peuvent créer des tourbillons émotionnels difficiles à gérer, ce qui est tout à fait normal.
+                    C'est dans ce contexte que ce projet a vu le jour : la création d'un site web destiné aux jeunes parents, principalement les mamans, mais pas seulement. 
+                    Le site propose des cours de relaxation, de portage, des conseils et du bien-être, le tout dans un design moderne et accessible.
+                    Ce site a été créé principalement pour valider ma formation DWWM. Cependant, il a également pour objectif d'être utilisé par ma sœur dans le cadre de son activité professionnelle. Actuellement, elle utilise un site réalisé en CMS, mais nous avons convenu qu'un site "fait main" serait plus avantageux à bien des égards.
+                    C'est donc avec ces deux objectifs en tête que j'ai décidé de créer un site sur ce thème, qui répondrait aux exigences du REAC 1 tout en répondant aux besoins de ma sœur.
+                    J'ai beaucoup discuté avec elle pour comprendre ses besoins, le public visé, les habitudes des utilisateurs sur son site actuel, etc. Mon but était d'adapter au mieux ce projet pour elle, comme je le ferais pour un véritable client.
                 </aside>
             </section>
 
@@ -35,16 +38,15 @@
                 <h2>Contexte</h2>
                 <p>Le projet que j'ai développé est une application web qui vise à (expliquer le problème que l'application résout).</p>
                 <aside class="notes">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti debitis amet voluptatibus. 
-                    Adipisci soluta voluptatum ut fugiat nihil maiores rerum alias veritatis, enim earum atque in cupiditate 
-                    nostrum aperiam facere.
+                    L'idée de ce projet est né de manière assez spontanée. Ma sœur possèdant un site web pour son activité professionnelle, avait créé son site via un CMS.
+                    Ayant toujours eu l'envie de l'améliorer et de le refaire entièrement par moi-même, j'ai décidé de transformer cette idée en projet concret. 
+                    J'ai ainsi choisi de développer un site que ma sœur pourrait également utiliser.
+                    Nous avons donc échangé régulièrement afin que je puisse cerner ses besoins et ses attentes, comme je l'aurais fait avec un véritable client.
+                    Par conséquent, j'ai également dû concevoir une interface d'administration. Mon objectif était de la rendre la plus simple possible pour permettre au client de réaliser lui-même les modifications nécessaires.
+                    En ce qui concerne le choix technologique, j'ai opté pour JavaScript pour le développement du calendrier. C'était une décision guidée par mon intérêt pour ce langage que j'ai cherché à apprendre en parallèle de la formation. De plus, je rencontrais des difficultés à obtenir ce que je voulais avec FullCalendar. 
+                    Ce défi s'est finalement révélé bénéfique et m'a poussé à me dépasser.
+                    Pour conclure, ce projet a été une opportunité pour moi d'appliquer mes nouvelles compétences en développement et de me confronter à des problématiques réelles. Cela m'a permis de confirmer mon intérêt pour ce domaine et de renforcer ma détermination à poursuivre dans cette voie.
                 </aside>
-            </section>
-
-            <!-- PRESENTATION -->
-            <section>
-                <h2>Présentation du Projet</h2>
-                <p>Le projet s'appelle 'Douceur de Lune'. Il s'agit d'une plateforme qui (expliquer ce que fait l'application).</p>
             </section>
 
             <!-- TECHNO + LANGAGE -->
@@ -70,7 +72,14 @@
             <!-- ARCHITECTURE -->
             <section>
                 <h2>Architecture de l'Application</h2>
-                <p>L'architecture de l'application est basée sur le modèle MVC (Modèle-Vue-Contrôleur). Les contrôleurs gèrent la logique de l'application, les modèles gèrent les données, et les vues gèrent l'affichage.</p>
+                <p>Le modèle MVC, ou Model-View-Controller, est un motif d'architecture logicielle couramment utilisé pour développer des applications web. Il divise une application en trois composants connectés entre eux, ce qui permet de séparer les tâches internes et facilite la maintenance et l'évolution de l'application.
+                   J'ai ici joint un schéma qui explique brièvement le fonctionnement de ce design pattern MVC que je vais expliquer phase par phase grossièrement, puis plus en détails juste après.
+                </p>
+                <ul>
+                    <li>Modèle (Model) : Le modèle représente les données et les règles métier de l'application. Il s'occupe de la lecture et de l'écriture des données, ainsi que de leur validation, de leur représentation et du traitement des erreurs. Il interagit généralement avec une base de données pour stocker et récupérer des données</li>
+                    <li>Contrôleur (Controller) : Le contrôleur agit comme un intermédiaire entre le modèle et la vue. Il traite les entrées de l'utilisateur, interagit avec le modèle pour récupérer ou stocker des données, et met à jour la vue en conséquence. Dans une application web, le contrôleur est généralement responsable de gérer les requêtes HTTP, de manipuler les données du formulaire, et de renvoyer les réponses HTTP.</li>
+                    <li>Vue (View) : La vue est responsable de la présentation des données à l'utilisateur. Elle prend les données du modèle et les affiche d'une manière que l'utilisateur peut comprendre. Dans une application web, la vue est généralement composée de templates HTML qui sont remplies avec des données du modèle.</li>
+                </ul>
             </section>
 
             <!-- FONCTIONNALTES -->
@@ -79,8 +88,11 @@
                 <p>Présenter les fonctionnalités clés de l'application. Use des captures d'écran ou des extraits de code pour illustrer certains points.</p>
                 <ul>
                     <!-- class=fragment pour afficher un après l'autre -->
+                    <li class="fragment">Inscription et connexion</li>
+                    <li class="fragment">Compte utilisateur avec modification ou suppression</li>
                     <li class="fragment">Calendrier de réservation en JS</li>
                     <li class="fragment">Méthode de payment Stripe</li>
+                    <li class="fragment">Interface administrateur</li>
                 </ul>
             </section>
 
@@ -93,19 +105,24 @@
             <!-- DEFIS ET SOLUTIONS -->
             <section>
                 <h2>Challenges et Solutions</h2>
-                <p>Parler des défis que j'ai rencontré pendant le développement de l'application et comment j'ai surmonté ca</p>
+                <p>Calendrier imaginé en FullCalendar et transformé en full JavaScript</p>
             </section>
 
             <!-- AMELIORATIONS -->
             <section>
                 <h2>Améliorations Futures</h2>
-                <p>Parler des améliorations ou des fonctionnalités que je prévoie d'ajouter à l'avenir.</p>
+                <p>Parler des améliorations ou des fonctionnalités que je prévoie d'ajouter.</p>
+                <ul>
+                    <li>Court terme</li>
+                    <li>Moyen terme</li>
+                    <li>Long terme</li>
+                </ul>
             </section>
 
             <!-- CONCLUSION -->
             <section>
                 <h2>Conclusion</h2>
-                <p>Résumer les points clés de la présentation et remercier le jury.</p>
+                <p>Résumer des points clés de la présentation + remerciements</p>
             </section>
 
             <!-- Exemple pour le code-->
@@ -158,34 +175,34 @@
         {# Introduction (1 slide) :
         Présentation rapide de moi et du sujet de la présentation.
 
-    Contexte (1-2 slides) :
-        Brève description du problème que mon application résout.
+        Contexte (1-2 slides) :
+            Brève description du problème que mon application résout.
 
-    Présentation du Projet (1-2 slides) :
-        Nom et objectif principal de mon projet.
+        Présentation du Projet (1-2 slides) :
+            Nom et objectif principal de mon projet.
 
-    Technologies Utilisées (1 slide) :
-        Liste des technologies principales utilisées.
+        Technologies Utilisées (1 slide) :
+            Liste des technologies principales utilisées.
 
-    Architecture de l'Application (2-3 slides) :
-        Brève description de l'architecture de l'application (contrôleurs, templates, etc.).
+        Architecture de l'Application (2-3 slides) :
+            Brève description de l'architecture de l'application (contrôleurs, templates, etc.).
 
-    Fonctionnalités Clés (3-4 slides) :
-        Présentation des fonctionnalités clés avec des captures d'écran.
+        Fonctionnalités Clés (3-4 slides) :
+            Présentation des fonctionnalités clés avec des captures d'écran.
 
-    Démo (2-3 slides) :
-        Quelques captures d'écran clés de l'application en action.
+        Démo (2-3 slides) :
+            Quelques captures d'écran clés de l'application en action.
 
-    Challenges et Solutions (1-2 slides) :
-        Un ou deux défis majeurs rencontrés et comment ils ont été résolus.
+        Challenges et Solutions (1-2 slides) :
+            Un ou deux défis majeurs rencontrés et comment ils ont été résolus.
 
-    Améliorations Futures (1 slide) :
-        Liste des améliorations ou fonctionnalités prévues.
+        Améliorations Futures (1 slide) :
+            Liste des améliorations ou fonctionnalités prévues.
 
-    Conclusion (1 slide) :
-        Résumé rapide et remerciements. #}
+        Conclusion (1 slide) :
+            Résumé rapide et remerciements. #}
     
-    <script type="module">
+    <script>
         import Reveal from '/reveal.js/dist/reveal.esm.js'
         import RevealNotes from '/reveal.js/plugin/notes/notes.esm.js'
         import RevealMarkdown from '/reveal.js/plugin/markdown/markdown.esm.js'
