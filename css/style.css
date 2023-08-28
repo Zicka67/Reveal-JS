@@ -8,13 +8,12 @@ img {
     height: auto;
 }
 
-.fragment {
+/* .fragment {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    
-}
+} */
 
 .minus-margin{
     margin-left: -74px;

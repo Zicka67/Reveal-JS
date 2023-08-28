@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Reveal</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css">
     <link rel="stylesheet" href="reveal.js/plugin/highlight/zenburn.css">
@@ -31,12 +31,13 @@
                     C'est donc avec ces deux objectifs en tête que j'ai décidé de créer un site sur ce thème, qui répondrait aux exigences du REAC 1 tout en répondant aux besoins de ma sœur.
                     J'ai beaucoup discuté avec elle pour comprendre ses besoins, le public visé, les habitudes des utilisateurs sur son site actuel, etc. Mon but était d'adapter au mieux ce projet pour elle, comme je le ferais pour un véritable client.
                 </aside>
-            </section>
+            </section>  
 
             <!-- CONTEXTE -->
             <section>
                 <h2>Contexte</h2>
-                <p>Le projet que j'ai développé est une application web qui vise à (expliquer le problème que l'application résout).</p>
+                <img class="img-presentation" src="img\Sans titre.png" alt="">
+                <p>Le projet que j'ai développé est une application web qui vise à proposer des cours pour les jeunes parents, en particulier les mères, qu'elles attendent un enfant ou qu'elles soient mères depuis quelques mois.</p>
                 <aside class="notes">
                     L'idée de ce projet est né de manière assez spontanée. Ma sœur possèdant un site web pour son activité professionnelle, avait créé son site via un CMS.
                     Ayant toujours eu l'envie de l'améliorer et de le refaire entièrement par moi-même, j'ai décidé de transformer cette idée en projet concret. 
@@ -55,51 +56,84 @@
                 <p>Pour développer ce projet, j'ai utilisé plusieurs technologies :</p>
                 <ul>
                     <li class="fragment img"><img src="img\Framework-Symfony-removebg-preview.png" alt="">SYMFONY comme framework de développement</li>
+                        <aside class="notes">Note pour SYMFONY</aside>
                     <li class="fragment img"><img src="img\npm-composer-cover-removebg-preview.png" alt="">COMPOSER et NPM comme gestionnaire de dépendance</li>
+                        <aside class="notes">Note pour COMPOSER</aside>
                     <li class="fragment img minus-margin"><img src="img\1_MGcLJS1ZvMFcBA94PXn16Q.png" alt="">VSCODE comme éditeur de code</li>
-                </ul>
+                        <aside class="notes">Note pour VSCODE</aside>
             </section>
 
             <section class="langage">
                 <h2>Ainsi que plusieurs langages utilisés</h2>
                 <ul>
                     <li class="fragment img"><img src="img\php_mysql-removebg-preview.png" alt="">PHP - SQL pour la programmation côté serveur et intéragir avec la base de donnée</li>
+                        <aside class="notes">Note pour PHP - SQL</aside>
                     <li class="fragment img minus-margin2"><img src="img\css3-html5-removebg-preview.png" alt="">HTML - CSS pour gérer la mise en page</li>
+                        <aside class="notes">Note pour HTML - CSS</aside>
                     <li class="fragment img"><img src="img\JavaScript-Logo-removebg-preview.png" alt="">JavaScript pour la gestion de mon calendrier et rendre certaines pages plus dynamiques</li>
+                     <aside class="notes">Note pour JavaScript</aside>
                 </ul>
             </section>
 
             <!-- ARCHITECTURE -->
             <section>
                 <h2>Architecture de l'Application</h2>
-                <p>Le modèle MVC, ou Model-View-Controller, est un motif d'architecture logicielle couramment utilisé pour développer des applications web. Il divise une application en trois composants connectés entre eux, ce qui permet de séparer les tâches internes et facilite la maintenance et l'évolution de l'application.
-                   J'ai ici joint un schéma qui explique brièvement le fonctionnement de ce design pattern MVC que je vais expliquer phase par phase grossièrement, puis plus en détails juste après.
-                </p>
+                <img src="img/MVC.png" alt="">
+                <p>Le modèle MVC, ou Model-View-Controller, est un motif d'architecture logicielle utilisé pour développer des applications web. Il divise une application en trois composants connectés entre eux.</p>
                 <ul>
-                    <li>Modèle (Model) : Le modèle représente les données et les règles métier de l'application. Il s'occupe de la lecture et de l'écriture des données, ainsi que de leur validation, de leur représentation et du traitement des erreurs. Il interagit généralement avec une base de données pour stocker et récupérer des données</li>
-                    <li>Contrôleur (Controller) : Le contrôleur agit comme un intermédiaire entre le modèle et la vue. Il traite les entrées de l'utilisateur, interagit avec le modèle pour récupérer ou stocker des données, et met à jour la vue en conséquence. Dans une application web, le contrôleur est généralement responsable de gérer les requêtes HTTP, de manipuler les données du formulaire, et de renvoyer les réponses HTTP.</li>
-                    <li>Vue (View) : La vue est responsable de la présentation des données à l'utilisateur. Elle prend les données du modèle et les affiche d'une manière que l'utilisateur peut comprendre. Dans une application web, la vue est généralement composée de templates HTML qui sont remplies avec des données du modèle.</li>
+                    <li class="fragment">Contrôleur (Controller)</li>
+                        <aside class="notes"><strong>Le contrôleur</strong> agit comme un intermédiaire entre le modèle et la vue. Il traite les entrées de l'utilisateur, interagit avec le modèle pour récupérer ou stocker des données, et met à jour la vue en conséquence. Dans une application web, le contrôleur est généralement responsable de gérer les requêtes HTTP, de manipuler les données du formulaire, et de renvoyer les réponses HTTP. <br><br> </aside>
+                    <li class="fragment">Modèle (Model)</li>
+                        <aside class="notes"><strong>Le modèle</strong> représente les données et les règles métier de l'application. Il s'occupe de la lecture et de l'écriture des données, ainsi que de leur validation, de leur représentation et du traitement des erreurs. Il interagit généralement avec une base de données pour stocker et récupérer des données. <br><br></aside>
+                    <li class="fragment">Vue (View)</li>
+                        <aside class="notes"><strong>La vue</strong> est responsable de la présentation des données à l'utilisateur. Elle prend les données du modèle et les affiche d'une manière que l'utilisateur peut comprendre. Dans une application web, la vue est généralement composée de templates HTML qui sont remplies avec des données du modèle.</aside>
                 </ul>
             </section>
-
+          
             <!-- FONCTIONNALTES -->
             <section>
                 <h2>Fonctionnalités Clés</h2>
-                <p>Présenter les fonctionnalités clés de l'application. Use des captures d'écran ou des extraits de code pour illustrer certains points.</p>
+                <p>Un système d'inscription et de connexion</p>
                 <ul>
-                    <!-- class=fragment pour afficher un après l'autre -->
-                    <li class="fragment">Inscription et connexion</li>
-                    <li class="fragment">Compte utilisateur avec modification ou suppression</li>
-                    <li class="fragment">Calendrier de réservation en JS</li>
-                    <li class="fragment">Méthode de payment Stripe</li>
-                    <li class="fragment">Interface administrateur</li>
+                    <li class="fragment"><img src="img/connexion.png" alt="">Inscription</li>
+                    <li class="fragment"><img src="img/subscription.png" alt="">Subscription</li>
                 </ul>
             </section>
 
+            <section>
+                <h2>Fonctionnalités Clés</h2>
+                <p>La possibilité de supprimer ou modifier son profil</p>
+                <ul>
+                    <li class="fragment"><img src="img/subscription.png" alt="">modification/supression dans le profil</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Fonctionnalités Clés</h2>
+                <p>Un calendrier de réservation</p>
+                        <ul>
+                            <li class="fragment"><img src="img/calendrier-jour.png" alt="">Section Mois/Jours</li>
+                            <li class="fragment"><img src="img/calendrier-horaires.png" alt="">Section horaires</li>
+                            <li class="fragment"><img src="img/calendrier-reservation-boutton.png" alt="">Section réservation</li>
+                        </ul>
+            </section>
+
+            <section>
+                <h2>Fonctionnalités Clés</h2>
+                <p>La possibilité de payé via Stripe</p>
+                <li class=""><img src="img/Stripe.png" alt="">Méthode de payment via Stripe</li>
+            </section>
+
+            <section>
+                <h2>Fonctionnalités Clés</h2>
+                <p>Une interface admin</p>
+                <li class=""><img src="img/admin-dashboard.png" alt="">Interface administrateur via EasyAdmin</li>
+            </section>
+            
             <!-- DEMO -->
             <section>
                 <h2>Démo</h2>
-                <p>Montrer une démo rapide de l'application. Parler des différentes parties de l'application pendant que je montre les slides (prévoir 6-7 slides rapides).</p>
+                <p>Maintenant que je vous ai présenté le projet en détail, voici une démonstration de son utilisation en situation réel.</p>
             </section>
 
             <!-- DEFIS ET SOLUTIONS -->
@@ -113,9 +147,9 @@
                 <h2>Améliorations Futures</h2>
                 <p>Parler des améliorations ou des fonctionnalités que je prévoie d'ajouter.</p>
                 <ul>
-                    <li>Court terme</li>
-                    <li>Moyen terme</li>
-                    <li>Long terme</li>
+                    <li class="fragment">Court terme : Paypal ? Captcha ?</li>
+                    <li class="fragment">Moyen terme : Messagerie ?</li>
+                    <li class="fragment">Long terme : Petite boutique en ligne</li>
                 </ul>
             </section>
 
@@ -169,40 +203,8 @@
     <!-- data-transition="fade" -->
     <!-- data-transition="zoom" -->
     <!-- data-auto-animate -->
-    {# S pour activer le Speaker Review #}
-    {# https://revealjs.com/transitions/   pour les transitions ou la doc#}
     
-        {# Introduction (1 slide) :
-        Présentation rapide de moi et du sujet de la présentation.
-
-        Contexte (1-2 slides) :
-            Brève description du problème que mon application résout.
-
-        Présentation du Projet (1-2 slides) :
-            Nom et objectif principal de mon projet.
-
-        Technologies Utilisées (1 slide) :
-            Liste des technologies principales utilisées.
-
-        Architecture de l'Application (2-3 slides) :
-            Brève description de l'architecture de l'application (contrôleurs, templates, etc.).
-
-        Fonctionnalités Clés (3-4 slides) :
-            Présentation des fonctionnalités clés avec des captures d'écran.
-
-        Démo (2-3 slides) :
-            Quelques captures d'écran clés de l'application en action.
-
-        Challenges et Solutions (1-2 slides) :
-            Un ou deux défis majeurs rencontrés et comment ils ont été résolus.
-
-        Améliorations Futures (1 slide) :
-            Liste des améliorations ou fonctionnalités prévues.
-
-        Conclusion (1 slide) :
-            Résumé rapide et remerciements. #}
-    
-    <script>
+    <script type="module">
         import Reveal from '/reveal.js/dist/reveal.esm.js'
         import RevealNotes from '/reveal.js/plugin/notes/notes.esm.js'
         import RevealMarkdown from '/reveal.js/plugin/markdown/markdown.esm.js'
