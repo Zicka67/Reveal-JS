@@ -22,24 +22,24 @@
             <!-- INTRODUCTION -->
             <section>
                 <h2>Douceur de lune</h2>
-                <img class="img-presentation" src="img\Sans titre.png" alt="">
-                <aside class="notes">
-                    Intro :<br>
-                    Devenir mère, ou être une mère récente, représente un changement majeur dans la vie d'une femme. En plus d'être une femme, on devient également une mère. Ce rôle s'accompagne de transformations physiques et mentales, de doutes et de peurs, mais aussi d'un sentiment de bonheur, de satisfaction et d'amour. Ces changements peuvent créer des tourbillons émotionnels difficiles à gérer, ce qui est tout à fait normal.
-                    C'est dans ce contexte que ce projet a vu le jour : la création d'un site web destiné aux jeunes parents, principalement les mamans, mais pas seulement. 
-                    Le site propose des cours de relaxation, de portage, des conseils et du bien-être, le tout dans un design moderne et accessible.
-                </aside>
-            </section>  
-
-            <!-- CONTEXTE -->
-            <section>
-                <h2>Pourquoi ce projet ?</h2>
-                <img class="img-presentation" src="img/questionnement.webp" alt="">
+                <h4>Pourquoi ce projet ?</h4>
+                <img class="img-presentation" src="img/Page de présentation.png" alt="">
                 <aside class="notes">
                     Projet principalement pour l'examen DWWM mais aussi ma soeur (infirmière libérale, neo nat, réa bébé)<br>
                     La cible est principalement les jeunes mères, mais aussi en couple ( même les pères seuls qui ont besoin de conseils )<br>
                     Nous avons donc échangé régulièrement afin que je puisse cerner ses besoins et ses attentes, comme je l'aurais fait avec un véritable client.<br>
                     Pour conclure, ce projet a été une opportunité pour moi d'appliquer mes nouvelles compétences en développement et de me confronter à des problématiques réelles. Cela m'a permis de confirmer mon intérêt pour ce domaine et de renforcer ma détermination à poursuivre dans cette voie.
+                </aside>
+            </section>  
+
+            <!-- CONTEXTE -->
+            <section>
+                <h2>Qui ? Quand ? Comment ?</h2>
+                <img class="img-presentation" src="img/questionnement.webp" alt="">
+                <aside class="notes">
+                    Devenir mère, ou être une mère récente, représente un changement majeur dans la vie d'une femme. En plus d'être une femme, on devient également une mère. Ce rôle s'accompagne de transformations physiques et mentales, de doutes et de peurs, mais aussi d'un sentiment de bonheur, de satisfaction et d'amour. Ces changements peuvent créer des tourbillons émotionnels difficiles à gérer, ce qui est tout à fait normal.
+                    C'est dans ce contexte que ce projet a vu le jour : la création d'un site web destiné aux jeunes parents, principalement les mamans, mais pas seulement. 
+                    Le site propose des cours de relaxation, de portage, des conseils et du bien-être, le tout dans un design moderne et accessible.
                 </aside>
             </section>
 
@@ -59,17 +59,34 @@
 
             <!-- ARCHITECTURE -->
             <section>
-                <h3>Architecture de l'Application</h3>
-                <img class="img-mvc" src="img/MVC.png" alt="">
-                <aside class="notes">Le modèle MVC, ou Model-View-Controller, est un motif d'architecture logicielle utilisé pour développer des applications web. Il divise une application en trois composants connectés entre eux.</aside>
+                <h3>Architecture de l'Application MVC</h3>
+                    <img class="img-mvc" src="img/MVC.png" alt="">
+                    <aside class="notes">Le modèle MVC, ou Model-View-Controller, est un motif d'architecture logicielle utilisé pour développer des applications web. Il divise une application en trois composants connectés entre eux.</aside>
                 <ul>
-                    <li class="fragment">Contrôleur (Controller)</li>
-                        <aside class="notes"><strong>Le contrôleur</strong> agit comme un intermédiaire entre le modèle et la vue. Il traite les entrées de l'utilisateur, interagit avec le modèle pour récupérer ou stocker des données, et met à jour la vue en conséquence. Dans une application web, le contrôleur est généralement responsable de gérer les requêtes HTTP, de manipuler les données du formulaire, et de renvoyer les réponses HTTP. <br><br> </aside>
                     <li class="fragment">Modèle (Model)</li>
                         <aside class="notes"><strong>Le modèle</strong> représente les données et les règles métier de l'application. Il s'occupe de la lecture et de l'écriture des données, ainsi que de leur validation, de leur représentation et du traitement des erreurs. Il interagit généralement avec une base de données pour stocker et récupérer des données. <br><br></aside>
                     <li class="fragment">Vue (View)</li>
                         <aside class="notes"><strong>La vue</strong> est responsable de la présentation des données à l'utilisateur. Elle prend les données du modèle et les affiche d'une manière que l'utilisateur peut comprendre. Dans une application web, la vue est généralement composée de templates HTML qui sont remplies avec des données du modèle.</aside>
+                    <li class="fragment">Contrôleur (Controller)</li>
+                        <aside class="notes"><strong>Le contrôleur</strong> agit comme un intermédiaire entre le modèle et la vue. Il traite les entrées de l'utilisateur, interagit avec le modèle pour récupérer ou stocker des données, et met à jour la vue en conséquence. Dans une application web, le contrôleur est généralement responsable de gérer les requêtes HTTP, de manipuler les données du formulaire, et de renvoyer les réponses HTTP. <br><br> </aside>
                 </ul>
+            </section>
+
+            <!-- MCD / MLD -->
+            <section>
+                <h3>Modèle conceptuel de donnée MCD</h3>
+                    <img class="img-mvc" src="img/MVC.png" alt="">
+                <aside class="notes">Le MCD est un outil qui permet de représenter de manière schématique et structurée les informations que l'on souhaite gérer dans une base de données. <br>
+                    Il s'agit en quelque sorte d'un "plan" qui identifie les différentes entités (comme des tables), leurs relations et leurs attributs.
+                    </aside>
+            </section>
+
+            <section>
+                <h3>Modèle logique de donnée MLD</h3>
+                    <img class="img-mvc" src="img/MVC.png" alt="">
+                <aside class="notes">Le MLD est une étape qui suit la réalisation du MCD. Il traduit le MCD en une structure plus technique, se rapprochant de ce qui sera 
+                    effectivement créé dans la base de données. <br>
+                    Le MLD détaille les tables, leurs clés, et les relations entre elles, en préparation de la mise en place concrète de la base de données.</aside>
             </section>
           
             <!-- FONCTIONNALTES -->
