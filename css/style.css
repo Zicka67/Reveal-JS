@@ -1,24 +1,22 @@
-img {
-    width: 235px;
-    height: 135px;
+ul{
+  list-style: none !important;
 }
 
-.img-presentation{
-    width:  50%;
+img {
+    width: 300px;
     height: auto;
 }
 
-/* .fragment {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-} */
-
-.minus-margin{
-    margin-left: -74px;
+.img-mvc {
+    width: 500px;
+    height: auto;
 }
 
-.minus-margin2 {
-    margin-left: -12px;
+.img-presentation{
+    width:  40%;
+    height: auto;
+}
+
+.slides {
+  
 }
