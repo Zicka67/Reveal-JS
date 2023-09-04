@@ -17,6 +17,19 @@ img {
     height: auto;
 }
 
-.slides {
-  
+.center-img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
 }
+
+
+.step3 {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+
