@@ -8,12 +8,32 @@ img {
 }
 
 .img-mvc {
-    width: 550px;
+    width: 600px;
+    height: auto;
+}
+
+.img-mcd {
+    width: 850px;
+    height: auto;
+}
+
+.img-mld {
+    width: 850px;
+    height: auto;
+}
+
+.img-stripe {
+    width: 750px;
     height: auto;
 }
 
 .img-presentation{
-    width:  35%;
+    width:  340px;
+    height: auto;
+}
+
+.img-presentation2{
+    width:  650px;
     height: auto;
 }
 
