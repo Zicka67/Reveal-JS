@@ -25,9 +25,11 @@
                 <h4>Pourquoi ce projet ?</h4>
                 <img class="img-presentation" src="img/Page de présentation.png" alt="">
                 <aside class="notes">
-                    Projet principalement pour l'examen DWWM mais aussi ma soeur (infirmière libérale, neo nat, réa bébé)<br>
-                    La cible est principalement les jeunes mères, mais aussi en couple ( même les pères seuls qui ont besoin de conseils )<br>
-                    Nous avons donc échangé régulièrement afin que je puisse cerner ses besoins et ses attentes, comme je l'aurais fait avec un véritable client.<br>
+                    Ce projet est principalement pour l'examen DWWM mais aussi ma soeur (infirmière libérale) qui sera donc la cliente <br><br>
+                    La cible est principalement les jeunes mères, mais aussi en couple (même les pères seuls qui ont besoin de conseils)<br><br>
+                    Nous avons donc échangé régulièrement afin que je puisse cerner ses besoins et ses attentes, comme avec un véritable client.<br><br>
+                    Ce site propose donc des cours d'allaitement, de portage et de relaxations. <br><br>
+
                     Pour conclure, ce projet a été une opportunité pour moi d'appliquer mes nouvelles compétences en développement et de me confronter à des problématiques réelles. Cela m'a permis de confirmer mon intérêt pour ce domaine et de renforcer ma détermination à poursuivre dans cette voie.
                 </aside>
             </section>  
@@ -37,7 +39,7 @@
                 <h2>Qui ? Quand ? Comment ?</h2>
                 <img class="img-presentation2" src="img/questionnement.webp" alt="">
                 <aside class="notes">
-                    Devenir mère, ou être une mère récente, représente un changement majeur dans la vie d'une femme. En plus d'être une femme, on devient également une mère. Ce rôle s'accompagne de transformations physiques et mentales, de doutes et de peurs, mais aussi d'un sentiment de bonheur, de satisfaction et d'amour. Ces changements peuvent créer des tourbillons émotionnels difficiles à gérer, ce qui est tout à fait normal.
+                    Devenir mère, ou être bientôt mère, représente un changement majeur dans la vie d'une femme. En plus d'être une femme, on devient également une mère. Ce rôle s'accompagne de transformations physiques et mentales, de doutes et de peurs, mais aussi d'un sentiment de bonheur, de satisfaction et d'amour. Ces changements peuvent créer des tourbillons émotionnels difficiles à gérer, ce qui est tout à fait normal.
                     C'est dans ce contexte que ce projet a vu le jour : la création d'un site web destiné aux jeunes parents, principalement les mamans, mais pas seulement. 
                     Le site propose des cours de relaxation, de portage, des conseils et du bien-être, le tout dans un design moderne et accessible.
                 </aside>
@@ -49,11 +51,12 @@
                 <!-- <p>Pour développer ce projet, j'ai utilisé plusieurs technologies :</p> -->
                 <div>
                     <p class="fragment img"><img src="img/Framework-Symfony-removebg-preview.png" alt=""></p>
-                        <aside class="notes">Note pour SYMFONY <br> PHP - SQL pour la programmation côté serveur et intéragir avec la base de donnée</aside>
+                        <aside class="notes">- SYMFONY framework bundleCore <br>- PHP - SQL pour la programmation côté serveur et intéragir avec la base de donnée <br>
+                            - TWIG comme moteur de templates(natif) <br></aside> 
                     <p class="fragment img"><img src="img/npm-composer-cover-removebg-preview.png" alt=""></p>
-                        <aside class="notes">Note pour COMPOSER <br> NPM</aside>
+                        <aside class="notes">- COMPOSER => gestionnaire de dépendance PHP<br>- NPM => gestionnaire de paquets pour JavaScript <br></aside>
                     <p class="fragment img minus-margin"><img src="img/html5-logo-best-web-design-psd-html-cms-development-ecommerce-6.png"></p>
-                        <aside class="notes">Note pour HTML <br> CSS <br> JS</aside>
+                        <aside class="notes">- HTML : (HyperText Markup Language) côté client pour strcturer la page<br> - CSS : pour le style UX/UI<br> - JS : language côté client pour dynamiser l'application</aside>
                 </div>
             </section>
 
@@ -61,14 +64,30 @@
             <section>
                 <h3>Architecture de l'Application MVC</h3>
                     <img class="img-mvc" src="img/MVC.png" alt="">
-                    <aside class="notes">Le modèle MVC, ou Model-View-Controller, est un motif d'architecture logicielle utilisé pour développer des applications web. Il divise une application en trois composants connectés entre eux.</aside>
+                    <aside class="notes"><strong>Requête</strong>  : Tout commence lorsque le navigateur envoie une requête HTTP à votre application Symfony. <br>
+
+                      <strong> Front Controller</strong>  : La requête est reçue par "front controller",(fichier public/index.php). Ce fichier est le point d'entrée pour toutes les requêtes. Il initialise l'environnement et crée une instance du noyau (Kernel). <br>
+                        
+                      <strong>Kernel</strong>  : Le Kernel prend la requête et la passe au routeur pour déterminer quel contrôleur doit être exécuté. <br>
+                        
+                      <strong>Routeur</strong>  : Le routeur examine la requête (URL, méthode HTTP, etc.) et détermine le contrôleur en fonction des routes définies dans l'application. <br>
+                        
+                      <strong>Contrôleur</strong>  : le Kernel appelle la méthode du contrôleur. Le contrôleur est responsable de la logique métier et de la préparation des données pour la vue. Le contrôleur peut interagir avec le modèle pour récupérer ou stocker des données. <br>
+                        
+                      <strong>Modèle</strong>  : Le modèle représente la logique métier et les données de  l'application. Dans une application Symfony elle interagit avec une base de données via Doctrine, l'ORM de Symfony. Le modèle récupère les données de la base de données, les traite si nécessaire, et les renvoie au contrôleur. <br>
+                        
+                      <strong>Vue</strong>  : Une fois que le contrôleur a préparé toutes les données, il les transmet à la vue pour la présentation. Dans Symfony, la vue est généralement gérée par le moteur de templates Twig. <br>
+                        
+                      <strong>Réponse</strong>  : Après que la vue ait été rendue, elle est renvoyée au Kernel sous forme de réponse (Response). Le Kernel envoie cette réponse au navigateur. <br>
+                        
+                      <strong>Navigateur</strong>  : Le navigateur reçoit la réponse et l'affiche à l'utilisateur.<br><br></aside>
                 <ul>
                     <li class="fragment">Modèle (Model)</li>
-                        <aside class="notes"><strong>Le modèle</strong> représente les données et les règles métier de l'application. Il s'occupe de la lecture et de l'écriture des données, ainsi que de leur validation, de leur représentation et du traitement des erreurs. Il interagit généralement avec une base de données pour stocker et récupérer des données. <br><br></aside>
+                        <aside class="notes"><strong>Le modèle</strong> EntityManager (CRUD) <br> Repository (methode find et perso)<br><br></aside>
                     <li class="fragment">Vue (View)</li>
-                        <aside class="notes"><strong>La vue</strong> est responsable de la présentation des données à l'utilisateur. Elle prend les données du modèle et les affiche d'une manière que l'utilisateur peut comprendre. Dans une application web, la vue est généralement composée de templates HTML qui sont remplies avec des données du modèle.</aside>
+                        <aside class="notes"><strong>La vue</strong> généralement composée de templates HTML et TWIG qui sont remplies avec des données du modèle.<br><br></aside>
                     <li class="fragment">Contrôleur (Controller)</li>
-                        <aside class="notes"><strong>Le contrôleur</strong> agit comme un intermédiaire entre le modèle et la vue. Il traite les entrées de l'utilisateur, interagit avec le modèle pour récupérer ou stocker des données, et met à jour la vue en conséquence. Dans une application web, le contrôleur est généralement responsable de gérer les requêtes HTTP, de manipuler les données du formulaire, et de renvoyer les réponses HTTP. <br><br> </aside>
+                        <aside class="notes"><strong>Le contrôleur</strong> agit comme un intermédiaire entre le modèle et la vue.  </aside>
                 </ul>
             </section>
 
@@ -76,17 +95,19 @@
             <section>
                 <h3>Modèle conceptuel de donnée MCD</h3>
                     <img class="img-mcd" src="img/mcd.png" alt="">
-                <aside class="notes">Le MCD est un outil qui permet de représenter de manière schématique et structurée les informations que l'on souhaite gérer dans une base de données. <br>
-                    Il s'agit en quelque sorte d'un "plan" qui identifie les différentes entités (comme des tables), leurs relations et leurs attributs.
+                <aside class="notes">- Représentation graphique des données et de leurs relations.<br>
+                    - Comprend des entités (objets métier) et des associations (relations entre entités).<br>
+                    - Chaque entité a des attributs (caractéristiques ou propriétés).<br>
                     </aside>
             </section>
 
             <section>
                 <h3>Modèle logique de donnée MLD</h3>
                     <img class="img-mld" src="img/mld.png" alt="">
-                <aside class="notes">Le MLD est une étape qui suit la réalisation du MCD. Il traduit le MCD en une structure plus technique, se rapprochant de ce qui sera 
-                    effectivement créé dans la base de données. <br>
-                    Le MLD détaille les tables, leurs clés, et les relations entre elles, en préparation de la mise en place concrète de la base de données.</aside>
+                <aside class="notes">- Représentation technique des données pour une base de données.<br>
+                    - Traduction du MCD en termes de tables, colonnes, clés primaires, clés étrangères<br>
+                    - Peut inclure des détails tels que les types de données, les contraintes d'intégrité
+                </aside>
             </section>
           
             <!-- FONCTIONNALTES -->
@@ -102,6 +123,8 @@
             <section>
                 <h3>Fonctionnalités Clés</h3>
                 <p>La possibilité de supprimer ou modifier son profil</p>
+                <aside class="notes"> Pour respecter le RGPD et le droit à la modification et effacement des données
+                </aside>
                 <div>
                    <img class="center-img" src="img/modification-profil.png" alt="">
                     <!-- <li class="fragment">modification/supression dans le profil</li> -->
@@ -111,45 +134,165 @@
             <section>
                 <h3>Fonctionnalités Clés</h3>
                 <p>Calendrier partie jours/mois</p>
-                <div class="step1"><img src="img/calendrier-jour.png" alt=""></div>
+                <aside class="notes"> - var numWeeks => 6 semaines affichées <br><br>
+                    - var actualDate => new objet Date -> stock la date actuel ( actualDate.getMonth(natif JS [0-11 pour les mois]) + ou -1 ) <br><br>
+                    - var splitURL =>  Sépare l'URL actuelle en utilisant le séparateur "/".<br><br>
+                    - var courseName => Récupère le dernier élément de l'URL séparée, probablement le nom du cours.<br><br>
+                    startTime: Définit l'heure de début pour la génération des créneaux horaires.<br><br>
+                    - function generateCalendar(): générer le calendrier. Elle utilise le DOM pour insérer le HTML nécessaire à la structure du calendrier dans la page.<br><br>
+                    - Document Object Model => API qui représente et interagit avec tous types de documents genre HTML ou XML<br><br>
+                </aside>
+                <div class="step1 fragment"><img src="img/calendrier-jour.png" alt=""></div>
                 
             </section>
 
             <section>
                 <h3>Fonctionnalités Clés</h3>
                 <p>Calendrier partie horaires</p>
+                <aside class="notes"> - var startTime => new objet Date -> Définit l'heure de début pour la génération des créneaux horaires. On va le setHours à 8<br><br>
+                    Boucle - while(startTime.getHours()<18 || startTime.getMinutes()<30) pour générer les 30 min <br><br>
+                    - var timeSlots => Un tableau vide qui sera rempli avec les créneaux horaires.<br>
+                </aside>
                 <div class="step2"><img src="img/calendrier-horaires.png" alt=""></div>
                         
             </section>
 
             <section>
+                <section data-markdown>
+                    <textarea data-template>
+
+                            ## Calendrier
+
+                            Exemple de code js :
+
+                            ```js [1-2|3-4|5-6|7|8|10-11|13-14|17|]
+                            var actualDate = new Date(); 
+                            var numWeeks = 6; 
+                            const splitURL = window.location.href.split("/");
+                            const courseName = splitURL[splitURL.length-1];
+                            var startTime = new Date(); 
+                            startTime.setHours(8, 0, 0);
+                            var timeSlots = []; 
+                            while(startTime.getHours()<18 || startTime.getMinutes()<30){
+                            
+                            var startTime_hours = startTime.getHours() > 9 ? startTime.getHours() : "0"+startTime.getHours();
+                            var startTime_minutes = startTime.getMinutes() > 9 ? startTime.getMinutes() : "0"+startTime.getMinutes();
+
+                            timeSlots.push(startTime_hours+":"+startTime_minutes);
+                            startTime.setMinutes(startTime.getMinutes() + 30);
+                            }
+
+                            generateCalendar();
+                            ```
+
+                            <h6>Si heure > à 9, elle utilise la valeur directement, si <= à 9, elle ajoute un "0" => 09h30</h6>
+
+                    </textarea>
+                </section>
+            </section>
+
+            <section>
                 <h3>Fonctionnalités Clés</h3>
                 <p>Calendrier partie methode de payement</p>
+                <aside class="notes"> - 2 boutons de type radio<br><br>
+                    - 1 bouton de reservation de type submit
+                </aside>
                 <div class="step3"><img src="img/calendrier-reservation-boutton.png" alt=""></div>                  
             </section>
 
             <section>
                 <h3>Fonctionnalités Clés</h3>
+                <p>Un système de reservation</p>
+                <aside class="notes"> - On prépare une requête AJAX (XMLHttpRequest) pour être envoyée côté serveur. <br>
+                    L'URL de la requête est construite en utilisant le slug du coup, pointant vers /days_unavailable/courseName (slug) <br><br>
+                    - On lance la route /days_unavailable/{name} dans CoursController.php. avec le slug passé dans l'url pour récupérer le cours spécifique en BD <br><br>
+                    - Une requête DQL est exécutée pour obtenir les jours non disponibles pour le mois en cours, soit spécifiquement pour ce cours, soit pour tous les cours : <br><br>
+                    "SELECT ud.slot, ud.all_day <br>
+                    FROM App\Entity\UnavailableDate ud <br>
+                    WHERE ud.date = :date <br>
+                    AND (ud.all_courses = true OR ud.course = :idCourse)"<br><br>
+                    - Le tableau des jours non disponibles est renvoyé au client sous forme de réponse JSON.<br><br>
+                    - Une fois la requête AJAX terminée et qu'une réponse est reçue du serveur, la function onreadystatechange de la requête est déclenché
+        
+                </aside>
+                <div class="step3"><img src="img/" alt=""></div>                  
+            </section>
+
+            <section>
+                <h3>Fonctionnalités Clés</h3>
                 <p>La possibilité de payer via Stripe</p>
+                <aside class="notes">
+                - endpoint<br><br>
+                - webhook
+                </aside>
                 <img class="img-stripe" src="img/Stripe.png" alt="">
             </section>
 
             <section>
                 <h3>Fonctionnalités Clés</h3>
                 <p>Une interface admin</p>
-                <li class=""><img src="img/admin-dashboard.png" alt="">Interface administrateur via EasyAdmin</li>
+                <aside class="notes">
+                    
+                </aside>
+                <p class="">Dashboard EasyAdmin</p>
+                <img src="img/admin-dashboard.png" alt="">
             </section>
             
             <!-- DEMO -->
             <section>
                 <h3>Démo</h3>
-                <p>Maintenant que je vous ai présenté le projet en détail, voici une démonstration de son utilisation en situation réel.</p>
+                <p>Utilisation en situation réel.</p>
             </section>
 
-            <!-- DEFIS ET SOLUTIONS -->
+            <!-- SECURITY -->
             <section>
-                <h3>Challenges et Solutions</h3>
-                <p>Calendrier imaginé en FullCalendar et transformé en full JavaScript</p>
+                <h3>Sécurité</h3>
+                <p>RGPD et failles</p>
+                <ul>
+                    <li class="fragment">Failles XSS</li>
+                        <aside class="notes"><strong>Les failles XSS (Cross-site Scripting), ou failles d'injection de code, sont des vulnérabilités qui permettent a un attaquant d'introduire du code malveillant via des entrées côté client.</strong> <br><br>
+                            - regex => limiter les caractères acceptés pour le message
+                            - textType => attendre des données en format text<br><br>
+                            - TWIG => échapper automatiquement les sorties<br><br>
+                            - CSP => <br><br>
+                        </aside>
+                        <img class="img-stripe fragment" src="img/REGEX.png" alt="">
+                    <li class="fragment">Failles CSRF</li>
+                        <aside class="notes"><strong>(Cross-Site Request Forgery) est une attaque qui “trompe” un utilisateur pour qu'il exécute des actions non voulues sur un site web, en utilisant sa session active.</strong> <br><br>
+                            - token CSRF => signature électronique  <br>
+                            - version : Il s'agit de la version de l'algorithme bcrypt utilisé.<br>
+                            - cost : C'est le coût logarithmique du bcrypt, qui détermine combien de fois l'algorithme a été exécuté. <br>
+                            - salt : C'est une chaîne de caractères utilisée pour “perturber” le hash. Dans le format bcrypt, le sel est toujours de 22 caractères.<br>
+                            - hash : C'est le hash bcrypt réel, généralement de 31 caractères pour bcrypt. <br><br></aside>
+                            <img class="img-stripe fragment" src="img/signatureElectro.png" alt="">
+                    <li class="fragment">Failles par force brute / dictionnaire</li>
+                        <aside class="notes">- honeypot => blocage de 10 min </aside>
+                        <img class="img-stripe fragment" src="img/honeypot.png" alt="">
+                </ul>
+            </section>
+
+             <!-- SEO -->
+             <section>
+                <h3>SEO</h3>
+                <ul>
+                    <li class="fragment">Balise META</li>
+                        <aside class="notes">
+
+                            
+                        </aside>
+                        <img class="img-stripe fragment" src="img/signatureElectro.png" alt="">
+                    <li class="fragment">Balise H1/alt</li>
+                        <aside class="notes">
+
+                        </aside>
+                        <img class="img-stripe fragment" src="img/metabalise.png" alt="">
+                    <li class="fragment">Responsive</li>
+                        <aside class="notes">
+                            Google utilise principalement la version mobile du site pour l'indexation et le classement.
+                            Si un site n'est pas adapté mobiles, ca peut affecter négativement son classement dans les résultats de recherche.
+                        </aside>
+                        <img class="img-stripe fragment" src="img/seo.png" alt="">
+                </ul>
             </section>
 
             <!-- AMELIORATIONS -->
@@ -158,8 +301,8 @@
                 <p>Parler des améliorations ou des fonctionnalités que je prévoie d'ajouter.</p>
                 <ul>
                     <li class="fragment">Court terme : Paypal ? Captcha ?</li>
-                    <li class="fragment">Moyen terme : Messagerie ?</li>
-                    <li class="fragment">Long terme : Petite boutique en ligne</li>
+                    <li class="fragment">Moyen terme : Boutique en ligne ?</li>
+                    <li class="fragment">Long terme : Messagerie ?</li>
                 </ul>
             </section>
 
